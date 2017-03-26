@@ -36,9 +36,10 @@ class MailAlias
     private $destination;
 
     /**
-     * @var \stdClass
+     * @var MailDomain
      *
-     * @ORM\Column(name="domain", type="object")
+     * @ORM\ManyToOne(targetEntity="MailDomain", inversedBy="mailAliases")
+     * @ORM\JoinColumn(name="domain_id", referencedColumnName="id")
      */
     private $domain;
 
@@ -125,4 +126,3 @@ class MailAlias
         return $this->domain;
     }
 }
-

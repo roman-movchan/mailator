@@ -36,9 +36,10 @@ class MailUser
     private $password;
 
     /**
-     * @var \stdClass
+     * @var MailDomain
      *
-     * @ORM\Column(name="domain", type="object")
+     * @ORM\ManyToOne(targetEntity="MailDomain", inversedBy="mailUsers")
+     * @ORM\JoinColumn(name="domain_id", referencedColumnName="id")
      */
     private $domain;
 
@@ -102,27 +103,26 @@ class MailUser
     }
 
     /**
-     * Set domain
-     *
-     * @param \stdClass $domain
-     *
-     * @return MailUser
-     */
-    public function setDomain($domain)
-    {
-        $this->domain = $domain;
-
-        return $this;
-    }
-
-    /**
      * Get domain
      *
-     * @return \stdClass
+     * @return \AppBundle\Entity\MailDomain
      */
     public function getDomain()
     {
         return $this->domain;
     }
-}
 
+    /**
+     * Set domain
+     *
+     * @param \AppBundle\Entity\MailDomain $domain
+     *
+     * @return MailUser
+     */
+    public function setDomain(\AppBundle\Entity\MailDomain $domain = null)
+    {
+        $this->domain = $domain;
+
+        return $this;
+    }
+}
