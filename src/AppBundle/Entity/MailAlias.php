@@ -119,7 +119,7 @@ class MailAlias
     /**
      * Get domain
      *
-     * @return \stdClass
+     * @return \AppBundle\Entity\MailDomain
      */
     public function getDomain()
     {
