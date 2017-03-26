@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Domain
  *
- * @ORM\Table(name="virtual_domain")
+ * @ORM\Table(name="virtual_domains")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MailDomainRepository")
  */
 class MailDomain

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * MailAlias
  *
- * @ORM\Table(name="virtual_alias")
+ * @ORM\Table(name="virtual_aliases")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MailAliasRepository")
  */
 class MailAlias

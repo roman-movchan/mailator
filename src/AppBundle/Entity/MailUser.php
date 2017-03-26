@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * MailUser
  *
- * @ORM\Table(name="virtual_user")
+ * @ORM\Table(name="virtual_users")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MailUserRepository")
  */
 class MailUser
